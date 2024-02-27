@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Item from './components/Item/Item'
-import { ART, BOOKS, CAFES, DISHES, FILMS, HIKES, PHOTOS } from './data/index'
+import { ART, BOOKS, CAFES, DISHES, DRIVES, FILMS, HIKES, PHOTOS } from './data/index'
 import * as images from './images/index'
 
 function App() {
@@ -12,9 +12,9 @@ function App() {
   return (
     <div className="App">
       <header>
-        <div id="header-content">
+        <div className="header-content">
           <h1>Ben Li</h1>
-          <p>@benji1123</p>
+          <p>benji112358@gmail.com</p>
           <p className="bio-text">{new Date().toLocaleString().split(',')[0]}</p>
         </div>
       </header>
@@ -38,12 +38,12 @@ function App() {
           </div>
 
           <div className="column">
-            <h3>film</h3>
+            {/* <h3>film</h3>
             <ul>
               {FILMS.map((f, index) => (
                 <Item key={index} name={f.name} />
               ))}
-            </ul>
+            </ul> */}
 
             <h3>trek</h3>
             <ul>
@@ -51,8 +51,21 @@ function App() {
                 <Item
                   key={index}
                   name={h.name}
-                  md2={h.dist.split('/')[1]}
-                  md3={h.dist.split('/')[0]}
+                  md2={h.dist}
+                  md3={h.elev}
+                  onHover={setItemImage(h.image)}
+                />
+              ))}
+            </ul>
+
+            <h3>🚗</h3>
+            <ul>
+              {DRIVES.map((h: any, index) => (
+                <Item
+                  key={index}
+                  name={h.name}
+                  md2={h.type}
+                  md3={h.dist}
                   onHover={setItemImage(h.image)}
                 />
               ))}
@@ -60,13 +73,6 @@ function App() {
           </div>
 
           <div className="column">
-            <h3 id="books-col">📚</h3>
-            <ul id="books">
-              {BOOKS.map((b: any, index) => (
-                <Item key={index} name={b.name} />
-              ))}
-            </ul>
-
             <h3>art</h3>
             <ul>
               {ART.map((art: any, index) => (
@@ -77,6 +83,7 @@ function App() {
                   onHover={setItemImage(art.image)}
                 />
               ))}
+              <li>-</li>
               {PHOTOS.map((photo: any, index) => (
                 <Item
                   key={index}
@@ -84,6 +91,12 @@ function App() {
                   md3={photo.place}
                   onHover={setItemImage(photo.image)}
                 />
+              ))}
+            </ul>
+            <h3>📚</h3>
+            <ul>
+              {BOOKS.map((b: any, index) => (
+                <Item key={index} name={b.name} />
               ))}
             </ul>
           </div>

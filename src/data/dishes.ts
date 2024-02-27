@@ -2,48 +2,48 @@ import * as images from '../images/index'
 
 export const DISHES = [
   {
-    name: 'risotto',
-    country: '🇮🇹',
-    ingredients: 'arborio rice',
-    image: images.risotto,
-  },
-  {
-    name: 'spag',
-    country: '🇮🇹',
-    ingredients: 'wine',
-    image: images.spag,
-  },
-  {
-    name: 'tag(liatelle)',
-    country: '🇮🇹',
-    image: images.tag,
-  },
-  {
-    name: 'jajangmyeon',
-    country: '🇰🇷',
-    ingredients: 'p-belly',
-    image: images.jajeong,
-  },
-  {
     name: 'paella',
     country: '🇪🇸',
     ingredients: 'argentinan prawns',
     image: images.paella,
   },
   {
-    name: 'cheesecake',
+    name: 'risotto',
+    country: '🇮🇹',
+    ingredients: 'arborio rice',
+    image: images.risotto,
+  },
+  {
+    name: 'spaghetti',
+    country: '🇮🇹',
+    ingredients: 'wine',
+    image: images.spag,
+  },
+  {
+    name: 'cake',
     country: '🇯🇵',
     ingredients: '',
     image: images.cheesecake,
   },
   {
-    name: 'sammy',
+    name: 'curry',
     country: '🇯🇵',
-    ingredients: '',
-    image: images.sammy,
+    ingredients: 's&b',
+    image: images.curry,
   },
   {
-    name: 'choco cip',
+    name: 'ramen',
+    country: '🇯🇵',
+    image: images.ramen,
+  },
+  {
+    name: 'jajang',
+    country: '🇰🇷',
+    ingredients: 'p-belly',
+    image: images.jajeong,
+  },
+  {
+    name: 'cookies',
     country: '🇺🇸',
     ingredients: 'robinhood flour',
     image: images.choc,
@@ -53,17 +53,6 @@ export const DISHES = [
     country: '🇺🇸',
     ingredients: 'salmon lol',
     image: images.salmon,
-  },
-  {
-    name: 'curryyy',
-    country: '🇯🇵',
-    ingredients: 's&b',
-    image: images.curry,
-  },
-  {
-    name: 'ramen',
-    country: '🇯🇵',
-    image: images.ramen,
   },
   {
     name: 'wontons',

@@ -1,10 +1,10 @@
 :root {
   /* https://www.behance.net/gallery/133185623/Cyberpunk-2077User-Interface-(Part-2) */
-  --accent-1: #131313;
+  --bgrnd: #131313;
   --accent-2: rgba(79, 175, 180, 0.8);
   --accent-3: grey;
   --accent-4: orange;
-  --white: rgba(255,255,255,0.84);
+  --text: rgba(255,255,255,0.8);
   --white-dull: rgba(255,255,255,0.5);
 }
 
@@ -12,36 +12,45 @@ body {
   margin: 0 15%;
   font-family: 'Fira Code';
   font-size: 13px;
-  background-color: var(--accent-1);
-  color: var(--white);
+  background-color: var(--bgrnd);
+  color: var(--text);
 }
 
-/* === ELEMENT === */
-
-header, footer {
-  z-index: 10;
-  position: fixed;
+header {
   height: 20em;
-  width: 100%;
-  background-color: var(--accent-1);
+  display: flex;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 2em;
+  font-family: 'Courier New', Courier, monospace
 }
 
 footer {
   height: 10em;
-  bottom: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  gap: 4em;
 }
 
 h1 {
   font-size: 1.5em;
-  font-family: 'Cambria';
+  /* font-family: 'Cambria'; */
 }
 
 h3 {
-  font-size: 4em;
+  font-size: 3.5em;
   color: var(--white-dull);
   font-family: 'Arial';
   line-height: 0;
-  /* color: var(--accent-2) */
 }
 
 ul {
@@ -53,32 +62,9 @@ li {
   margin-bottom: 5px;
 }
 
-button {
-  /* https://getcssscan.com/css-buttons-examples */
-  background-color: rgba(51, 51, 51, 0.06);
-  border-radius: 20px;
-  border-width: 0;
-  color: #333333;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 500;
-  line-height: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 9px 12px;
-  text-align: center;
-  transition: all 200ms;
-  vertical-align: baseline;
-  white-space: nowrap;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
 #displayImage {
   border-radius: 10px;
-  border: 1px solid var(--white);
+  border: 1px solid var(--text);
   max-width: 80%;
   max-height: 50%;
 }
@@ -86,21 +72,6 @@ button {
 #img-col {
   max-width: 25%;
   text-align: center;
-}
-
-/* === LAYOUT === */
-
-#header-content {
-  position: absolute;
-  bottom: 0;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  margin: 25em 0 5em 0;
-  gap: 4em;
 }
 
 .row {
@@ -114,7 +85,7 @@ button {
 }
 
 .bio-text {
-  color: var(--white)
+  color: var(--text)
 }
 
 /* === ITEM === */
@@ -133,18 +104,16 @@ button {
 .item-meta-2::before,
 .item-meta-3::before {
   /* these items are inline */
-  content: " "
+  content: " ";
 }
 
 .item-meta-1 {
-  font-family: 'Fira Code', Courier, monospace;
   font-style: italic;
   color: var(--accent-3);
   font-size: 12px;
 }
 
 .item-meta-2 {
-  font-family: 'Fira Code';
   font-size: 11px;
   font-style: italic;
   /* font-weight: bold; */
@@ -152,15 +121,8 @@ button {
 }
 
 .item-meta-3 {
-  font-family: 'Fira Code';
   font-size: 10px;
   /* font-style: italic; */
   /* font-weight: bold; */
   color: var(--accent-4);
-}
-
-#caption {
-  font-size: 12px;
-  color: grey;
-  font-style: italic;
 }
