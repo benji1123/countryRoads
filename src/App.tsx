@@ -23,16 +23,18 @@ function App() {
         </div>
       </header>
 
-      <div className="container">
-        <div className="row">
-          <div className="column">
+      <div className="overall-container">
+        <div className="list-container">
+          <div className="list">
             <h3>dish</h3>
             <ul>
               {DISHES.map((d: any, index) => (
                 <Item key={index} name={d.name} md1={d.country} onHover={setItemImage(d.image)} />
               ))}
             </ul>
+          </div>
 
+          <div className="list">
             <h3>café</h3>
             <ul id="cafe-list">
               {CAFES.map((c: any, index) => (
@@ -41,14 +43,7 @@ function App() {
             </ul>
           </div>
 
-          <div className="column">
-            {/* <h3>film</h3>
-            <ul>
-              {FILMS.map((f, index) => (
-                <Item key={index} name={f.name} />
-              ))}
-            </ul> */}
-
+          <div className="list">
             <h3>trek</h3>
             <ul>
               {HIKES.map((h: any, index) => (
@@ -61,7 +56,9 @@ function App() {
                 />
               ))}
             </ul>
+          </div>
 
+          <div className="list">
             <h3>🚗</h3>
             <ul>
               {DRIVES.map((h: any, index) => (
@@ -76,7 +73,7 @@ function App() {
             </ul>
           </div>
 
-          <div className="column">
+          <div className="list">
             <h3>art</h3>
             <ul>
               {ART.map((art: any, index) => (
@@ -97,6 +94,9 @@ function App() {
                 />
               ))}
             </ul>
+          </div>
+
+          <div className="list">
             <h3>📚</h3>
             <ul>
               {BOOKS.map((b: any, index) => (
@@ -104,13 +104,12 @@ function App() {
               ))}
             </ul>
           </div>
-
-          <div className="col" id="img-col">
-            <a id="imgLink" href="/#" target="blank">
-              <img id="displayImage" aria-label="gallery image" src={displayImage} />
-            </a>
-          </div>
         </div>
+        <div id="img-col">
+        <a id="imgLink" href="/#" target="blank">
+          <img id="displayImage" aria-label="gallery image" src={displayImage} />
+        </a>
+      </div>
       </div>
     </div>
   )
