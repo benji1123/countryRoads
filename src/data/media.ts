@@ -1,5 +1,3 @@
-import * as images from '../images'
-
 export const FILMS = [
   { name: 'ferrari' },
   { name: 'john wick' },
