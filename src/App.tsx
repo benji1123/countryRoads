@@ -3,6 +3,7 @@ import './App.css'
 import Item from './components/Item/Item'
 import { ART, BOOKS, CAFES, DISHES, DRIVES, FILMS, HIKES, PHOTOS } from './data/index'
 import * as images from './images/index'
+import { Link } from 'react-router-dom'
 
 function App() {
   const [displayImage, setDisplayImage] = useState(images.cyber)
@@ -16,6 +17,9 @@ function App() {
           <h1>Ben Li</h1>
           <p>benji112358@gmail.com</p>
           <p className="bio-text">{new Date().toLocaleString().split(',')[0]}</p>
+          <Link to="https://github.com/benji1123" style={{ color: 'teal' }} target="_blank">
+            Github
+          </Link>
         </div>
       </header>
 

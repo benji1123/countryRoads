@@ -8,14 +8,6 @@
   --white-dull: rgba(255,255,255,0.5);
 }
 
-body {
-  margin: 0 15%;
-  font-family: 'Fira Code';
-  font-size: 13px;
-  background-color: var(--bgrnd);
-  color: var(--text);
-}
-
 header {
   height: 20em;
   display: flex;
