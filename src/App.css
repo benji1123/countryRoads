@@ -35,6 +35,7 @@ body {
 .overall-container {
   display: flex;
   gap: 3em;
+  margin-bottom: 5em;
 }
 
 .list-container {
@@ -46,6 +47,18 @@ body {
 
   background: black;
   border-radius: 1em;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 12em);
+  gap: 3em 2em;
+  align-items: center;
+}
+
+.image-grid-item {
+  max-width: 12em;
+  border-radius: 10px;
 }
 
 .list {

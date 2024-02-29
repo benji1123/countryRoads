@@ -1,13 +1,13 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './App.css'
 import List from './components/List/List'
-import { ART, BOOKS, CAFES, DISHES, DRIVES, FILMS, HIKES, PHOTOS } from './data/index'
+import { ART, BOOKS, CAFES, DISHES, DRIVES, HIKES, PHOTOS } from './data/index'
 import * as images from './images/index'
-import { Link } from 'react-router-dom'
 
 function App() {
+  const DATA = [ART, BOOKS, CAFES, DISHES, DRIVES, HIKES, PHOTOS]
   const [displayImage, setDisplayImage] = useState(images.cyber)
-
   const setItemImage = (src: string) => () => setDisplayImage(src)
 
   return (
@@ -23,6 +23,8 @@ function App() {
         </div>
       </header>
 
+      {/* Each list is created using the same fields except for the getMdN(). Maybe I can
+      use a common field-name like item.md1. This will let me extract list-creation into a function. */}
       <div className="overall-container">
         <div className="list-container">
           <List
@@ -76,6 +78,24 @@ function App() {
             <img id="displayImage" aria-label="gallery image" src={displayImage} />
           </a>
         </div>
+      </div>
+
+      {/** Quick image-grid implementation using the items above. When loading the page,
+       * the images load in batches, so seems React is doing some helpful underneath the hood.
+       * TODO investigate ways of rendering image-grid (i.e. ajax)
+       */}
+      <div className="im[](../../../../jsx-eslint/eslint-plugin-react/tree/master/docs/rules/jsx-no-comment-textnodes.md)age-grid">
+        {DATA.map((category: any[]) =>
+          category
+            .slice(0, 8)
+            .filter((item: any) => item.image !== '')
+            .slice(0, 5)
+            .map((item: any) => (
+              <div>
+                <img className="image-grid-item" aria-label={item.name} src={item.image} />
+              </div>
+            ))
+        )}
       </div>
     </div>
   )

@@ -11,7 +11,7 @@ export const BOOKS = [
   // { name: "malcolm x", author: "lee & wiley" },
   // { name: "other madisons", author: "kearse" },
   // { name: "beyond good & evil", author: "nietzhe" },
-  { name: 'neuromancer', author: 'gibbons' },
-  { name: '3 body problem', author: 'cixin' },
-  { name: 'sapiens', author: 'harari' },
+  { name: 'neuromancer', author: 'gibbons', image: '' },
+  { name: '3 body problem', author: 'cixin', image: '' },
+  { name: 'sapiens', author: 'harari', image: '' },
 ]

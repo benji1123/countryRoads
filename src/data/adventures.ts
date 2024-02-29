@@ -52,30 +52,36 @@ export const DRIVES = [
     name: 'NYC:YHM',
     dist: '700k',
     type: '←',
+    image: ''
   },
   {
     name: 'YVR:SFO',
     dist: '3,000k',
     type: '↩',
+    image: ''
   },
   {
     name: 'YYZ:YVR',
     dist: '4,400k',
     type: '→',
+    image: ''
   },
   {
     name: 'YYZ:YQB',
     dist: '3,400k',
     type: '↩',
+    image: ''
   },
   {
     name: 'YYZ:BNA',
     dist: '2,400k',
     type: '↩',
+    image: ''
   },
   {
     name: 'YYZ:YHZ',
     dist: '3,500k',
     type: '↩',
+    image: ''
   },
 ]
