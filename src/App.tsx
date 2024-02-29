@@ -84,7 +84,7 @@ function App() {
        * the images load in batches, so seems React is doing some helpful underneath the hood.
        * TODO investigate ways of rendering image-grid (i.e. ajax)
        */}
-      <div className="im[](../../../../jsx-eslint/eslint-plugin-react/tree/master/docs/rules/jsx-no-comment-textnodes.md)age-grid">
+      <div className="image-grid">
         {DATA.map((category: any[]) =>
           category
             .slice(0, 8)
