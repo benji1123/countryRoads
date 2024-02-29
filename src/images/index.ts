@@ -2,6 +2,8 @@ import gar4 from './hikes/garibaldi/gar4.jpg'
 import gar3 from './hikes/garibaldi/gar3.jpg'
 import gar2 from './hikes/garibaldi/gar2.jpg'
 import gar1 from './hikes/garibaldi/gar1.jpg'
+import aiy from './cafes/aiy.jpg';
+import rev from './cafes/rev.jpg';
 import propenv from './cafes/prop-env.jpg'
 import nembar from './cafes/nem-bar.jpg'
 import saunter from './cafes/saunter.jpg'
@@ -40,6 +42,8 @@ export {
   nembar,
   saunter,
   beau,
+  aiy,
+  rev,
   cicloin,
   prop1,
   milano,

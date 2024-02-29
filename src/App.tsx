@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Item from './components/Item/Item'
+import List from './components/List/List'
 import { ART, BOOKS, CAFES, DISHES, DRIVES, FILMS, HIKES, PHOTOS } from './data/index'
 import * as images from './images/index'
 import { Link } from 'react-router-dom'
@@ -25,91 +25,57 @@ function App() {
 
       <div className="overall-container">
         <div className="list-container">
-          <div className="list">
-            <h3>dish</h3>
-            <ul>
-              {DISHES.map((d: any, index) => (
-                <Item key={index} name={d.name} md1={d.country} onHover={setItemImage(d.image)} />
-              ))}
-            </ul>
-          </div>
+          <List
+            title="dish"
+            data={DISHES}
+            setItemImage={setItemImage}
+            getMd2={(item: any) => item.country}
+          ></List>
 
-          <div className="list">
-            <h3>café</h3>
-            <ul id="cafe-list">
-              {CAFES.map((c: any, index) => (
-                <Item key={index} name={c.name} md2={c.drink} onHover={setItemImage(c.image)} />
-              ))}
-            </ul>
-          </div>
+          <List
+            title="café"
+            data={CAFES}
+            setItemImage={setItemImage}
+            getMd2={(item: any) => item.drink}
+          ></List>
 
-          <div className="list">
-            <h3>trek</h3>
-            <ul>
-              {HIKES.map((h: any, index) => (
-                <Item
-                  key={index}
-                  name={h.name}
-                  md2={h.dist}
-                  md3={h.elev}
-                  onHover={setItemImage(h.image)}
-                />
-              ))}
-            </ul>
-          </div>
+          <List
+            title="trek"
+            data={HIKES}
+            setItemImage={setItemImage}
+            getMd2={(item: any) => item.dist}
+            getMd3={(item: any) => item.elev}
+          ></List>
 
-          <div className="list">
-            <h3>🚗</h3>
-            <ul>
-              {DRIVES.map((h: any, index) => (
-                <Item
-                  key={index}
-                  name={h.name}
-                  md2={h.type}
-                  md3={h.dist}
-                  onHover={setItemImage(h.image)}
-                />
-              ))}
-            </ul>
-          </div>
+          <List
+            title="🚗"
+            data={DRIVES}
+            setItemImage={setItemImage}
+            getMd2={(item: any) => item.type}
+            getMd3={(item: any) => item.dist}
+          ></List>
 
-          <div className="list">
-            <h3>art</h3>
-            <ul>
-              {ART.map((art: any, index) => (
-                <Item
-                  key={index}
-                  name={art.name}
-                  md3={art.medium}
-                  onHover={setItemImage(art.image)}
-                />
-              ))}
-              <li>-</li>
-              {PHOTOS.map((photo: any, index) => (
-                <Item
-                  key={index}
-                  name={photo.name}
-                  md3={photo.place}
-                  onHover={setItemImage(photo.image)}
-                />
-              ))}
-            </ul>
-          </div>
+          <List
+            title="art"
+            data={ART}
+            setItemImage={setItemImage}
+            getMd3={(item: any) => item.medium}
+          ></List>
 
-          <div className="list">
-            <h3>📚</h3>
-            <ul>
-              {BOOKS.map((b: any, index) => (
-                <Item key={index} name={b.name} />
-              ))}
-            </ul>
-          </div>
+          <List
+            title="photo"
+            data={PHOTOS}
+            setItemImage={setItemImage}
+            getMd3={(item: any) => item.place}
+          ></List>
+
+          <List title="📚" data={BOOKS} setItemImage={setItemImage}></List>
         </div>
         <div id="img-col">
-        <a id="imgLink" href="/#" target="blank">
-          <img id="displayImage" aria-label="gallery image" src={displayImage} />
-        </a>
-      </div>
+          <a id="imgLink" href="/#" target="blank">
+            <img id="displayImage" aria-label="gallery image" src={displayImage} />
+          </a>
+        </div>
       </div>
     </div>
   )

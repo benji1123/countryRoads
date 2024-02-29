@@ -2,6 +2,18 @@ import * as images from '../images/index'
 
 export const CAFES = [
   {
+    name: 'Aiyaohno',
+    area: 'Ctown',
+    drink: 'ML',
+    image: images.aiy,
+  },
+  {
+    name: 'Revolver',
+    area: 'Gas',
+    drink: 'L',
+    image: images.rev,
+  },
+  {
     name: 'Nemesis',
     area: 'VicSq',
     drink: 'L',
@@ -16,11 +28,11 @@ export const CAFES = [
   {
     name: 'Beaucoup',
     area: 'Granv',
-    drink: 'C,L',
+    drink: 'C,L,HL',
     image: images.beau,
   },
   {
-    name: 'Ciclo',
+    name: 'Ciclo 🛞',
     area: 'Ytown',
     drink: 'C',
     image: images.cicloout,
