@@ -35,7 +35,7 @@ body {
 .overall-container {
   display: flex;
   gap: 3em;
-  margin-bottom: 5em;
+  margin-bottom: 4.5em;
 }
 
 .list-container {
@@ -60,6 +60,10 @@ body {
 .image-grid-item {
   max-width: 12em;
   border-radius: 10px;
+}
+
+.image-grid-item:hover {
+  transform: scale(1.05);
 }
 
 .list {
