@@ -43,7 +43,7 @@ body {
   grid-template-columns: repeat(auto-fill, 14em);
   width: clamp(33%, 70%, 100%);
   padding: 1em;
-  gap: 0;
+  gap: 1.5em 0;
 
   background: black;
   border-radius: 1em;

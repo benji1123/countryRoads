@@ -7,6 +7,7 @@ import * as images from './images/index'
 
 function App() {
   const DATA = [ART, BOOKS, CAFES, DISHES, DRIVES, HIKES, PHOTOS]
+  // TODO images.cyber (gif) is 1MB+ so replace or compress it
   const [displayImage, setDisplayImage] = useState(images.cyber)
   const setItemImage = (src: string) => () => setDisplayImage(src)
 
@@ -87,6 +88,7 @@ function App() {
       <div className="image-grid">
         {DATA.map((category: any[]) =>
           category
+            // TODO shuffle order of items so users see different images
             .slice(0, 8)
             .filter((item: any) => item.image !== '')
             .slice(0, 5)
